@@ -1,0 +1,12 @@
+[Unit]
+Description=poweroff tool web
+
+[Service]
+Type=simple
+WorkingDirectory=/PATH-TO-DIR
+ExecStart=/PATH-TO-DIR/.venv/bin/python -m uvicorn main:app --reload --host IP-IN-LOCAL-NETWORK --port PORT
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=network-online.target
