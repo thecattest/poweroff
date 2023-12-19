@@ -13,7 +13,6 @@ async def favicon():
 
 @app.get('/', response_class=HTMLResponse)
 async def root():
-    # a = popen('ls').read()
     return '''
     <div style="display: flex;justify-content: center;align-items: center;height: 100%;">
         <a href="/poweroff"><img src="favicon.ico"></a>
@@ -23,7 +22,5 @@ async def root():
 
 @app.get('/poweroff')
 async def root():
-    # return popen('ls').read()
-    return popen('shutdown now --reboot').read()
-    # return popen('shutdown now -H').read()
-    # return popen('shutdown now --poweroff').read()
+    # return popen('shutdown now --reboot').read()
+    return popen('shutdown now --poweroff').read()
